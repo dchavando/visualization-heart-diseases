@@ -1,0 +1,128 @@
+{
+  "caracteristicas_importantes": [
+    {
+      "feature": "AgeCategory",
+      "importance": 0.2958552510310065
+    },
+    {
+      "feature": "BMI",
+      "importance": 0.11332519602785178
+    },
+    {
+      "feature": "GeneralHealth",
+      "importance": 0.09442655206083576
+    },
+    {
+      "feature": "HadArthritis",
+      "importance": 0.06347650833999842
+    },
+    {
+      "feature": "HadDiabetes",
+      "importance": 0.06314083927613989
+    },
+    {
+      "feature": "HadStroke",
+      "importance": 0.05277927950116552
+    },
+    {
+      "feature": "SleepHours",
+      "importance": 0.0485057509360195
+    },
+    {
+      "feature": "UnhealthyDays",
+      "importance": 0.047082961416374886
+    },
+    {
+      "feature": "HadCOPD",
+      "importance": 0.04066317769019976
+    },
+    {
+      "feature": "Sex",
+      "importance": 0.039897581827432436
+    }
+  ],
+  "capacidad_predictiva": {
+    "accuracy": {
+      "valor": 0.8046,
+      "porcentaje": 80.46,
+      "explicacion": "El modelo acierta en 80.5% de los casos. De cada 100 predicciones, 80.5 son correctas.",
+      "interpretacion": "Buena precisión general, pero no es suficiente para confiar únicamente en el modelo."
+    },
+    "recall": {
+      "valor": 0.6382,
+      "porcentaje": 63.82,
+      "explicacion": "El modelo detecta 63.8% de los casos reales de enfermedad. De cada 100 enfermos, identifica 63.8.",
+      "interpretacion": "Esto significa que 36.2% de los enfermos NO son detectados por el modelo. Son casos perdidos.",
+      "casos_perdidos": 2217
+    },
+    "precision": {
+      "valor": 0.2616,
+      "porcentaje": 26.16,
+      "explicacion": "De los casos que el modelo predice como enfermos, 26.2% realmente lo están.",
+      "interpretacion": "Hay falsos positivos (personas sanas predichas como enfermas), pero son útiles para alertar sobre riesgo."
+    },
+    "auc_roc": {
+      "valor": 0.8268,
+      "porcentaje": 82.68,
+      "explicacion": "El modelo tiene 82.7% de capacidad para distinguir entre enfermos y sanos.",
+      "interpretacion": "Excelente discriminación. El modelo es muy bueno identificando quién está en riesgo vs quién no."
+    }
+  },
+  "matriz_confusion": {
+    "verdaderos_positivos": {
+      "cantidad": 3910,
+      "explicacion": "3,910 personas enfermas fueron correctamente identificadas como enfermas."
+    },
+    "falsos_negativos": {
+      "cantidad": 2217,
+      "explicacion": "2,217 personas enfermas fueron predichas como sanas. ESTOS SON LOS CASOS PERDIDOS - personas que tienen enfermedad pero el modelo no las detectó.",
+      "riesgo": "Estas 2,217 personas necesitan pruebas adicionales porque podrían tener enfermedad sin saberlo."
+    },
+    "verdaderos_negativos": {
+      "cantidad": 50672,
+      "explicacion": "50,672 personas sanas fueron correctamente identificadas como sanas."
+    },
+    "falsos_positivos": {
+      "cantidad": 11039,
+      "explicacion": "11,039 personas sanas fueron predichas como enfermas. Estos son falsos positivos.",
+      "utilidad": "Aunque son falsos positivos, son útiles para alertar a personas aparentemente sanas pero con factores de riesgo."
+    }
+  },
+  "predicciones_dataset": {
+    "total_predicciones": 339189,
+    "predichos_con_enfermedad": 74952,
+    "predichos_sin_enfermedad": 264237,
+    "porcentaje_predicho": 22.1,
+    "explicacion": "El modelo predice que 74,952 personas (22.1%) están en riesgo de enfermedad coronaria.",
+    "distribucion_probabilidades": {
+      "promedio": 0.2778,
+      "mediana": 0.1935,
+      "desv_estandar": 0.2451
+    },
+    "hallazgos_clave": {
+      "alto_riesgo_sin_diagnostico": {
+        "cantidad": 49998,
+        "porcentaje": 14.74,
+        "explicacion": "49,998 personas NO tienen diagnóstico de enfermedad coronaria, pero el modelo les da >50% de probabilidad de tenerla.",
+        "recomendacion": "Estas personas deberían someterse a pruebas de detección (ECG, ecocardiograma, pruebas de estrés)."
+      },
+      "bajo_riesgo_con_diagnostico": {
+        "cantidad": 1647,
+        "porcentaje": 0.49,
+        "explicacion": "1,647 personas TIENEN diagnóstico pero el modelo les da <30% de probabilidad.",
+        "interpretacion": "Podrían ser casos diagnosticados tempranamente o con factores de riesgo menos evidentes."
+      }
+    }
+  },
+  "resumen_ejecutivo": {
+    "pregunta_clave": "¿Cuántas personas podrían tener enfermedad coronaria sin saberlo?",
+    "respuesta": "Según el modelo, aproximadamente 49,998 personas (14.74%) tienen alta probabilidad de enfermedad pero no tienen diagnóstico.",
+    "capacidad_del_modelo": "El modelo puede identificar correctamente 63.8% de los casos reales, pero pierde 36.2% (casos perdidos).",
+    "recomendacion": "El modelo es útil para identificar poblaciones en riesgo, pero debe complementarse con pruebas clínicas reales.",
+    "top_3_variables": {
+      "AgeCategory": 0.2959,
+      "BMI": 0.1133,
+      "GeneralHealth": 0.0944
+    }
+  }
+}

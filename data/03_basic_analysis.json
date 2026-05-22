@@ -1,0 +1,589 @@
+{
+  "estadisticas_generales": {
+    "total_registros": 445131,
+    "registros_validos": 440110,
+    "con_enfermedad_coronaria": 39751,
+    "sin_enfermedad_coronaria": 400359,
+    "prevalencia_porcentaje": 9.03,
+    "total_columnas": 33,
+    "valores_nulos_totales": 761665,
+    "porcentaje_completitud": 94.81
+  },
+  "demografica": {
+    "por_sexo": {
+      "Female": {
+        "total": 235893,
+        "porcentaje": 52.99
+      },
+      "Male": {
+        "total": 209238,
+        "porcentaje": 47.01
+      }
+    },
+    "por_edad": {
+      "18-24": {
+        "total": 26941,
+        "porcentaje": 6.18
+      },
+      "25-29": {
+        "total": 21990,
+        "porcentaje": 5.04
+      },
+      "30-34": {
+        "total": 25807,
+        "porcentaje": 5.92
+      },
+      "35-39": {
+        "total": 28525,
+        "porcentaje": 6.54
+      },
+      "40-44": {
+        "total": 29942,
+        "porcentaje": 6.87
+      },
+      "45-49": {
+        "total": 28531,
+        "porcentaje": 6.54
+      },
+      "50-54": {
+        "total": 33644,
+        "porcentaje": 7.72
+      },
+      "55-59": {
+        "total": 36821,
+        "porcentaje": 8.44
+      },
+      "60-64": {
+        "total": 44511,
+        "porcentaje": 10.21
+      },
+      "65-69": {
+        "total": 47099,
+        "porcentaje": 10.8
+      },
+      "70-74": {
+        "total": 43472,
+        "porcentaje": 9.97
+      },
+      "75-79": {
+        "total": 32518,
+        "porcentaje": 7.46
+      },
+      "80 or older": {
+        "total": 36251,
+        "porcentaje": 8.31
+      }
+    },
+    "por_salud_general": {
+      "Excellent": {
+        "total": 71878,
+        "porcentaje": 16.19
+      },
+      "Very good": {
+        "total": 148444,
+        "porcentaje": 33.44
+      },
+      "Good": {
+        "total": 143597,
+        "porcentaje": 32.35
+      },
+      "Fair": {
+        "total": 60273,
+        "porcentaje": 13.58
+      },
+      "Poor": {
+        "total": 19741,
+        "porcentaje": 4.45
+      }
+    },
+    "por_raza": {
+      "Black": {
+        "total": 35446,
+        "porcentaje": 8.22
+      },
+      "Hispanic": {
+        "total": 42917,
+        "porcentaje": 9.96
+      },
+      "Multiracial": {
+        "total": 9578,
+        "porcentaje": 2.22
+      },
+      "Other": {
+        "total": 22713,
+        "porcentaje": 5.27
+      },
+      "White": {
+        "total": 320420,
+        "porcentaje": 74.33
+      }
+    }
+  },
+  "habitos": {
+    "actividad_fisica": {
+      "No": {
+        "total": 106480,
+        "porcentaje": 23.98
+      },
+      "Yes": {
+        "total": 337558,
+        "porcentaje": 76.02
+      }
+    },
+    "tabaquismo": {
+      "Never": {
+        "total": 245955,
+        "porcentaje": 59.96
+      },
+      "Some days": {
+        "total": 13938,
+        "porcentaje": 3.4
+      },
+      "Former": {
+        "total": 113774,
+        "porcentaje": 27.74
+      },
+      "Every day": {
+        "total": 36003,
+        "porcentaje": 8.78
+      },
+      "Smoker (Unspecified)": {
+        "total": 502,
+        "porcentaje": 0.12
+      }
+    },
+    "consumo_alcohol": {
+      "No": {
+        "total": 187667,
+        "porcentaje": 47.46
+      },
+      "Occasional": {
+        "total": 42165,
+        "porcentaje": 10.66
+      },
+      "Heavy": {
+        "total": 121309,
+        "porcentaje": 30.68
+      },
+      "Frequent": {
+        "total": 44287,
+        "porcentaje": 11.2
+      }
+    }
+  },
+  "estadisticas_numericas": {
+    "bmi": {
+      "promedio": 28.53,
+      "mediana": 27.44,
+      "minimo": 12.02,
+      "maximo": 99.64,
+      "desv_estandar": 6.55,
+      "percentil_25": 24.13,
+      "percentil_75": 31.75
+    },
+    "sleep_hours": {
+      "promedio": 7.02,
+      "mediana": 7.0,
+      "minimo": 1.0,
+      "maximo": 24.0,
+      "desv_estandar": 1.5,
+      "percentil_25": 6.0,
+      "percentil_75": 8.0
+    },
+    "unhealthy_days": {
+      "promedio": 3.06,
+      "mediana": 0.0,
+      "minimo": 0.0,
+      "maximo": 30.0,
+      "desv_estandar": 7.31,
+      "percentil_25": 0.0,
+      "percentil_75": 1.0
+    }
+  },
+  "por_estado": {
+    "Alabama": {
+      "total_registros": 4467,
+      "con_enfermedad": 569,
+      "sin_enfermedad": 3898,
+      "prevalencia_porcentaje": 12.74
+    },
+    "Alaska": {
+      "total_registros": 5785,
+      "con_enfermedad": 483,
+      "sin_enfermedad": 5302,
+      "prevalencia_porcentaje": 8.35
+    },
+    "Arizona": {
+      "total_registros": 10038,
+      "con_enfermedad": 1062,
+      "sin_enfermedad": 8976,
+      "prevalencia_porcentaje": 10.58
+    },
+    "Arkansas": {
+      "total_registros": 5206,
+      "con_enfermedad": 727,
+      "sin_enfermedad": 4479,
+      "prevalencia_porcentaje": 13.96
+    },
+    "California": {
+      "total_registros": 10809,
+      "con_enfermedad": 688,
+      "sin_enfermedad": 10121,
+      "prevalencia_porcentaje": 6.37
+    },
+    "Colorado": {
+      "total_registros": 9288,
+      "con_enfermedad": 552,
+      "sin_enfermedad": 8736,
+      "prevalencia_porcentaje": 5.94
+    },
+    "Connecticut": {
+      "total_registros": 9659,
+      "con_enfermedad": 723,
+      "sin_enfermedad": 8936,
+      "prevalencia_porcentaje": 7.49
+    },
+    "Delaware": {
+      "total_registros": 3949,
+      "con_enfermedad": 348,
+      "sin_enfermedad": 3601,
+      "prevalencia_porcentaje": 8.81
+    },
+    "District of Columbia": {
+      "total_registros": 3201,
+      "con_enfermedad": 187,
+      "sin_enfermedad": 3014,
+      "prevalencia_porcentaje": 5.84
+    },
+    "Florida": {
+      "total_registros": 13214,
+      "con_enfermedad": 1606,
+      "sin_enfermedad": 11608,
+      "prevalencia_porcentaje": 12.15
+    },
+    "Georgia": {
+      "total_registros": 9116,
+      "con_enfermedad": 908,
+      "sin_enfermedad": 8208,
+      "prevalencia_porcentaje": 9.96
+    },
+    "Hawaii": {
+      "total_registros": 7686,
+      "con_enfermedad": 523,
+      "sin_enfermedad": 7163,
+      "prevalencia_porcentaje": 6.8
+    },
+    "Idaho": {
+      "total_registros": 6201,
+      "con_enfermedad": 470,
+      "sin_enfermedad": 5731,
+      "prevalencia_porcentaje": 7.58
+    },
+    "Illinois": {
+      "total_registros": 4020,
+      "con_enfermedad": 269,
+      "sin_enfermedad": 3751,
+      "prevalencia_porcentaje": 6.69
+    },
+    "Indiana": {
+      "total_registros": 10324,
+      "con_enfermedad": 1043,
+      "sin_enfermedad": 9281,
+      "prevalencia_porcentaje": 10.1
+    },
+    "Iowa": {
+      "total_registros": 8836,
+      "con_enfermedad": 726,
+      "sin_enfermedad": 8110,
+      "prevalencia_porcentaje": 8.22
+    },
+    "Kansas": {
+      "total_registros": 11115,
+      "con_enfermedad": 1054,
+      "sin_enfermedad": 10061,
+      "prevalencia_porcentaje": 9.48
+    },
+    "Kentucky": {
+      "total_registros": 3990,
+      "con_enfermedad": 452,
+      "sin_enfermedad": 3538,
+      "prevalencia_porcentaje": 11.33
+    },
+    "Louisiana": {
+      "total_registros": 5551,
+      "con_enfermedad": 570,
+      "sin_enfermedad": 4981,
+      "prevalencia_porcentaje": 10.27
+    },
+    "Maine": {
+      "total_registros": 10535,
+      "con_enfermedad": 1154,
+      "sin_enfermedad": 9381,
+      "prevalencia_porcentaje": 10.95
+    },
+    "Maryland": {
+      "total_registros": 16236,
+      "con_enfermedad": 1410,
+      "sin_enfermedad": 14826,
+      "prevalencia_porcentaje": 8.68
+    },
+    "Massachusetts": {
+      "total_registros": 10918,
+      "con_enfermedad": 815,
+      "sin_enfermedad": 10103,
+      "prevalencia_porcentaje": 7.46
+    },
+    "Michigan": {
+      "total_registros": 9923,
+      "con_enfermedad": 925,
+      "sin_enfermedad": 8998,
+      "prevalencia_porcentaje": 9.32
+    },
+    "Minnesota": {
+      "total_registros": 16681,
+      "con_enfermedad": 1245,
+      "sin_enfermedad": 15436,
+      "prevalencia_porcentaje": 7.46
+    },
+    "Mississippi": {
+      "total_registros": 4196,
+      "con_enfermedad": 390,
+      "sin_enfermedad": 3806,
+      "prevalencia_porcentaje": 9.29
+    },
+    "Missouri": {
+      "total_registros": 7333,
+      "con_enfermedad": 736,
+      "sin_enfermedad": 6597,
+      "prevalencia_porcentaje": 10.04
+    },
+    "Montana": {
+      "total_registros": 6978,
+      "con_enfermedad": 609,
+      "sin_enfermedad": 6369,
+      "prevalencia_porcentaje": 8.73
+    },
+    "Nebraska": {
+      "total_registros": 7403,
+      "con_enfermedad": 759,
+      "sin_enfermedad": 6644,
+      "prevalencia_porcentaje": 10.25
+    },
+    "Nevada": {
+      "total_registros": 3153,
+      "con_enfermedad": 303,
+      "sin_enfermedad": 2850,
+      "prevalencia_porcentaje": 9.61
+    },
+    "New Hampshire": {
+      "total_registros": 6677,
+      "con_enfermedad": 728,
+      "sin_enfermedad": 5949,
+      "prevalencia_porcentaje": 10.9
+    },
+    "New Jersey": {
+      "total_registros": 8122,
+      "con_enfermedad": 578,
+      "sin_enfermedad": 7544,
+      "prevalencia_porcentaje": 7.12
+    },
+    "New Mexico": {
+      "total_registros": 4713,
+      "con_enfermedad": 455,
+      "sin_enfermedad": 4258,
+      "prevalencia_porcentaje": 9.65
+    },
+    "New York": {
+      "total_registros": 17549,
+      "con_enfermedad": 1399,
+      "sin_enfermedad": 16150,
+      "prevalencia_porcentaje": 7.97
+    },
+    "North Carolina": {
+      "total_registros": 4466,
+      "con_enfermedad": 352,
+      "sin_enfermedad": 4114,
+      "prevalencia_porcentaje": 7.88
+    },
+    "North Dakota": {
+      "total_registros": 4112,
+      "con_enfermedad": 383,
+      "sin_enfermedad": 3729,
+      "prevalencia_porcentaje": 9.31
+    },
+    "Ohio": {
+      "total_registros": 16320,
+      "con_enfermedad": 1807,
+      "sin_enfermedad": 14513,
+      "prevalencia_porcentaje": 11.07
+    },
+    "Oklahoma": {
+      "total_registros": 5657,
+      "con_enfermedad": 664,
+      "sin_enfermedad": 4993,
+      "prevalencia_porcentaje": 11.74
+    },
+    "Oregon": {
+      "total_registros": 5716,
+      "con_enfermedad": 440,
+      "sin_enfermedad": 5276,
+      "prevalencia_porcentaje": 7.7
+    },
+    "Pennsylvania": {
+      "total_registros": 4535,
+      "con_enfermedad": 377,
+      "sin_enfermedad": 4158,
+      "prevalencia_porcentaje": 8.31
+    },
+    "Rhode Island": {
+      "total_registros": 5833,
+      "con_enfermedad": 521,
+      "sin_enfermedad": 5312,
+      "prevalencia_porcentaje": 8.93
+    },
+    "South Carolina": {
+      "total_registros": 9925,
+      "con_enfermedad": 975,
+      "sin_enfermedad": 8950,
+      "prevalencia_porcentaje": 9.82
+    },
+    "South Dakota": {
+      "total_registros": 7356,
+      "con_enfermedad": 758,
+      "sin_enfermedad": 6598,
+      "prevalencia_porcentaje": 10.3
+    },
+    "Tennessee": {
+      "total_registros": 5195,
+      "con_enfermedad": 563,
+      "sin_enfermedad": 4632,
+      "prevalencia_porcentaje": 10.84
+    },
+    "Texas": {
+      "total_registros": 14066,
+      "con_enfermedad": 1312,
+      "sin_enfermedad": 12754,
+      "prevalencia_porcentaje": 9.33
+    },
+    "Utah": {
+      "total_registros": 9738,
+      "con_enfermedad": 629,
+      "sin_enfermedad": 9109,
+      "prevalencia_porcentaje": 6.46
+    },
+    "Vermont": {
+      "total_registros": 8741,
+      "con_enfermedad": 725,
+      "sin_enfermedad": 8016,
+      "prevalencia_porcentaje": 8.29
+    },
+    "Virginia": {
+      "total_registros": 10305,
+      "con_enfermedad": 952,
+      "sin_enfermedad": 9353,
+      "prevalencia_porcentaje": 9.24
+    },
+    "Washington": {
+      "total_registros": 25898,
+      "con_enfermedad": 2011,
+      "sin_enfermedad": 23887,
+      "prevalencia_porcentaje": 7.77
+    },
+    "West Virginia": {
+      "total_registros": 4906,
+      "con_enfermedad": 669,
+      "sin_enfermedad": 4237,
+      "prevalencia_porcentaje": 13.64
+    },
+    "Wisconsin": {
+      "total_registros": 11141,
+      "con_enfermedad": 1028,
+      "sin_enfermedad": 10113,
+      "prevalencia_porcentaje": 9.23
+    },
+    "Wyoming": {
+      "total_registros": 4096,
+      "con_enfermedad": 359,
+      "sin_enfermedad": 3737,
+      "prevalencia_porcentaje": 8.76
+    },
+    "Guam": {
+      "total_registros": 2238,
+      "con_enfermedad": 199,
+      "sin_enfermedad": 2039,
+      "prevalencia_porcentaje": 8.89
+    },
+    "Puerto Rico": {
+      "total_registros": 5492,
+      "con_enfermedad": 471,
+      "sin_enfermedad": 5021,
+      "prevalencia_porcentaje": 8.58
+    },
+    "Virgin Islands": {
+      "total_registros": 1502,
+      "con_enfermedad": 90,
+      "sin_enfermedad": 1412,
+      "prevalencia_porcentaje": 5.99
+    }
+  },
+  "condiciones_cronicas": {
+    "Accidente Cerebrovascular": {
+      "total": 443574,
+      "con_condicion": 19239,
+      "sin_condicion": 424335,
+      "prevalencia_porcentaje": 4.34
+    },
+    "Asma": {
+      "total": 443358,
+      "con_condicion": 66694,
+      "sin_condicion": 376664,
+      "prevalencia_porcentaje": 15.04
+    },
+    "EPOC": {
+      "total": 442912,
+      "con_condicion": 35656,
+      "sin_condicion": 407256,
+      "prevalencia_porcentaje": 8.05
+    },
+    "Depresión": {
+      "total": 442319,
+      "con_condicion": 91410,
+      "sin_condicion": 350909,
+      "prevalencia_porcentaje": 20.67
+    },
+    "Enfermedad Renal": {
+      "total": 443205,
+      "con_condicion": 20315,
+      "sin_condicion": 422890,
+      "prevalencia_porcentaje": 4.58
+    },
+    "Artritis": {
+      "total": 442498,
+      "con_condicion": 151147,
+      "sin_condicion": 291351,
+      "prevalencia_porcentaje": 34.16
+    },
+    "Diabetes": {
+      "total": 444044,
+      "con_condicion": 61158,
+      "sin_condicion": 382886,
+      "prevalencia_porcentaje": 13.77
+    }
+  },
+  "relaciones": {
+    "por_sexo": {
+      "Female": {
+        "total": 233462,
+        "con_enfermedad": 16614,
+        "sin_enfermedad": 216848,
+        "prevalencia_porcentaje": 7.12
+      },
+      "Male": {
+        "total": 206648,
+        "con_enfermedad": 23137,
+        "sin_enfermedad": 183511,
+        "prevalencia_porcentaje": 11.2
+      }
+    }
+  }
+}

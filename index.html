@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>PRA 2 | Eduardo Mayoral</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/topojson@3"></script>
+
+</head>
+
+<body>
+    <div class="bg-luxury">
+        <div class="bg-gradient"></div>
+        <div class="ecg-grid"></div>
+        <div class="glow-orb"></div>
+        <div class="glow-orb"
+            style="top: auto; bottom: -20%; left: auto; right: -10%; width: 50vw; height: 50vw; background: radial-gradient(circle, rgba(245,158,11,0.08) 0%, transparent 70%);">
+        </div>
+        <div class="particles"></div>
+    </div>
+
+    <header class="glass-header">
+        <div class="logo"><i class="fas fa-heart"></i> CardioVista</div>
+        <div class="nav-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#datos">Datos</a>
+            <a href="#analisis">Análisis</a>
+            <a href="#factores">Factores</a>
+            <a href="#ml">ML Predictivo</a>
+        </div>
+    </header>
+
+    <div class="side-nav">
+        <div class="nav-dot" data-section="inicio"></div>
+        <div class="nav-dot" data-section="datos"></div>
+        <div class="nav-dot" data-section="analisis"></div>
+        <div class="nav-dot" data-section="factores"></div>
+        <div class="nav-dot" data-section="ml"></div>
+    </div>
+
+
+    <section id="inicio" class="fullscreen-section">
+        <div class="container" style="text-align: center;">
+            <i class="fas fa-heartbeat hero-heart"></i>
+            <h1 style="font-size: 4rem; margin-bottom: 0.5rem;">Enfermedad Coronaria<br><span
+                    style="color:#fbbf24;">BRFSS 2022</span></h1>
+            <p class="section-sub" style="max-width: 700px; margin: 1rem auto;">Análisis avanzado de más de 400,000
+                registros · Factores de riesgo · Modelo Random Forest y XGBoost interactivo</p>
+            <button class="btn-hero"
+                onclick="document.getElementById('datos').scrollIntoView({behavior:'smooth'})">Explorar Dashboard <i
+                    class="fas fa-arrow-down"></i></button>
+        </div>
+    </section>
+
+    <section id="datos" class="fullscreen-section">
+        <div class="container">
+            <h2>📋 Fuente de datos</h2>
+            <p class="section-sub">Behavioral Risk Factor Surveillance System (CDC) — 50 estados + territorios</p>
+
+            <div class="stats-grid" id="statsDatos">
+                <div class="stat-card" data-tooltip="Registros tras limpieza y filtrado">
+                    <div class="stat-value" id="total-records">—</div>
+                    <div class="stat-label">Registros analizados</div>
+                </div>
+                <div class="stat-card" data-tooltip="Variables demográficas, clínicas y de hábitos">
+                    <div class="stat-value" id="total-columns">—</div>
+                    <div class="stat-label">Variables clave</div>
+                </div>
+                <div class="stat-card" data-tooltip="Incluye 50 estados + DC y territorios">
+                    <div class="stat-value" id="states-count">—</div>
+                    <div class="stat-label">Estados cubiertos</div>
+                </div>
+                <div class="stat-card" data-tooltip="Prevalencia ponderada de enfermedad coronaria (CVDCRHD)">
+                    <div class="stat-value" id="prevalence">—</div>
+                    <div class="stat-label">Prevalencia nacional</div>
+                </div>
+            </div>
+
+            <div class="glass-card" role="tablist" aria-label="Información técnica">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="desc" role="tab" aria-selected="true"
+                        aria-controls="desc">📄 Metodología</button>
+                    <button class="tab-btn" data-tab="limpieza" role="tab" aria-selected="false"
+                        aria-controls="limpieza">🧹 Limpieza</button>
+                    <button class="tab-btn" data-tab="variables" role="tab" aria-selected="false"
+                        aria-controls="variables">🔬 Variables destacadas</button>
+                </div>
+                <div class="tab-pane active-pane" id="desc" role="tabpanel" aria-labelledby="tab-desc">
+                    <p>El <strong>BRFSS</strong> es una encuesta telefónica anual que recopila datos sobre
+                        comportamientos de riesgo,
+                        condiciones crónicas y uso de servicios preventivos.<br> <br>Este análisis se centra en la
+                        variable
+                        <strong>Enfermedad coronaria (CVDCRHD)</strong> y sus factores asociados.
+                    </p>
+                    <p>Fuente: CDC BRFSS 2022, datos ponderados representativos a nivel estatal.</p>
+                    <div class="badge-update">Actualización: ciclo 2022 · Muestreo estratificado por estado</div>
+                </div>
+                <div class="tab-pane" id="limpieza" role="tabpanel" aria-labelledby="tab-limpieza">
+                    <ul class="clean-list">
+                        <li>Eliminación de duplicados exactos</li>
+                        <li>Estandarización de respuestas (Yes/No/Don't know/Refused)</li>
+                        <li>Creación de variables derivadas: alcohol status, unhealthy days, categorías IMC</li>
+                        <li>Preservación de missing values para integridad estadística</li>
+                    </ul>
+                    <div class="extra-note">Valores atípicos tratados con winsorización al 1% en variables continuas
+                    </div>
+                </div>
+                <div class="tab-pane" id="variables" role="tabpanel" aria-labelledby="tab-variables">
+                    <div class="var-grid">
+                        <div class="var-card"><strong>Demográficas</strong> Edad, sexo, raza, educación, ingresos
+                        </div>
+                        <div class="var-card"><strong>Hábitos</strong> Tabaquismo, consumo alcohol, actividad física
+                        </div>
+                        <div class="var-card"><strong>Comorbilidades</strong> Diabetes, depresión, artritis, ACV
+                        </div>
+                        <div class="var-card"><strong>Salud general</strong> Autopercepción de salud, días de mala
+                            salud física/mental</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="analisis" class="fullscreen-section">
+        <div class="container">
+            <h2>🗺️ Análisis geográfico y demográfico</h2>
+            <div class="glass-card">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="mapa">Mapa de prevalencia</button>
+                    <button class="tab-btn" data-tab="demo">Distribución por sexo & raza</button>
+                </div>
+                <div class="tab-pane active-pane" id="mapa">
+                    <h3 style=" text-align: center; margin-bottom:7px;">Porcentaje de enfermedad coronaria por estado
+                    </h3>
+                    <div id="map" style="height: 480px;"></div>
+
+                </div>
+                <div class="tab-pane" id="demo">
+                    <div class="chart-grid">
+                        <div class="chart-card">
+                            <h4>Distribución por sexo</h4>
+                            <div id="chart-sexo" class="waffle-container"></div>
+                        </div>
+                        <div class="chart-card">
+                            <h4>Enfermedad coronaria por sexo</h4>
+                            <div id="chart-coronaria-sexo-analisis"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="factores" class="fullscreen-section">
+        <div class="container">
+            <h2>❤️ Factores de riesgo & comorbilidades</h2>
+            <p class="section-sub">Relación entre enfermedad coronaria y principales condiciones de salud</p>
+            <div class="glass-card">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="tab1">📊 Análisis por Edad</button>
+                    <button class="tab-btn" data-tab="tab2">🧬 Factores</button>
+                    <button class="tab-btn" data-tab="tab3">🩸 Comorbilidades </button>
+                </div>
+                <div class="tab-pane active-pane" id="tab1">
+                    <h4 style="text-align: center;">Riesgo de Enfermedad Coronaria por Edad</h4>
+                    <div id="chart-timeline-age"></div>
+                    <div
+                        style="margin-top: 1rem; padding: 1rem; background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; border-radius: 0.5rem;">
+                        <p><strong>Hallazgo clave:</strong> El riesgo se duplica entre 50-60 años. A los 80+, 1 de
+                            cada 4 personas tiene enfermedad coronaria.</p>
+                    </div>
+                </div>
+                <div class="tab-pane" id="tab2">
+                    <h4 style="text-align: center; margin-bottom: 7px;">Prevalencia de enfermedad coronaria por edad y
+                        factor de riesgo</h4>
+                    <div>
+                        <label for="factorGroupSelect">Categoría: </label>
+                        <select id="factorGroupSelect">
+                            <option value="Enfermedades">Enfermedades</option>
+                            <option value="Conductuales">Conductuales</option>
+                        </select>
+                    </div>
+                    <div id="chart-headmap" class="text-align:center;  display: flex; justify-content: center;"></div>
+                    <div
+                        style="margin-top: 1rem; padding: 1rem; background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; border-radius: 0.5rem;">
+                        <p><strong>Hallazgo clave:</strong>
+                            El ACV previo multiplica el riesgo coronario hasta 40 veces (26‑41% vs. <1%), siendo el
+                                factor de mayor impacto en todas las edades. La diabetes, EPOC y obesidad aumentan el
+                                riesgo progresivamente con la edad. </p>
+                    </div>
+                </div>
+                <div class="tab-pane" id="tab3">
+                    <h4 style="text-align: center; margin-bottom: 7px;">Prevalencia de enfermedad coronaria por edad y
+                        comorbilidades</h4>
+
+                    <div id="chart-comorb" class="text-align:center;  display: flex; justify-content: center;"></div>
+                    <div
+                        style="margin-top: 1rem; padding: 1rem; background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; border-radius: 0.5rem;">
+                        <p><strong>Hallazgo clave:</strong> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="ml" class="fullscreen-section">
+        <div class="container">
+            <h2>🤖 Modelo Random Forest y XGBoost</h2>
+            <p class="section-sub">Predicción de enfermedad coronaria con 17 variables predictoras</p>
+            <div class="glass-card">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="tab1">🌲 Random Forest</button>
+                    <button class="tab-btn" data-tab="tab2">⚡ XGBoost</button>
+                    <button class="tab-btn" data-tab="tab3">📊 Análisis</button>
+                </div>
+                <!-- Tab 1: Random Forest -->
+                <div class="tab-pane active-pane" id="tab1">
+                    <div id="rf-metrics"></div>
+                    <div class="two-columns">
+                        <div class="column-card" id="rf-left">
+                            <div id="rf-horizontal-chart" style="height: 400px;"></div>
+                        </div>
+                        <div id="rf-right"></div>
+                    </div>
+                </div>
+
+                <!-- Tab 2: XGBoost -->
+                <div class="tab-pane" id="tab2">
+                    <div id="xgb-metrics"></div>
+                    <div class="two-columns">
+                        <div class="column-card" id="xgb-left">
+                            <div id="xgb-horizontal-chart" style="height: 400px;"></div>
+                        </div>
+                        <div id="xgb-right"></div>
+                    </div>
+                </div>
+                <!-- Tab 3: Análisis comparativo -->
+                <div class="tab-pane" id="tab3">
+                    <div id="comparative-content"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <footer>
+        <p><i class="fas fa-heart" style="color:#ef4444;"></i> Fuente: CDC BRFSS 2022 · Visualización interactiva ·
+            CardioVista Analytics</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

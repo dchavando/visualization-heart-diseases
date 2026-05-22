@@ -1,0 +1,146 @@
+{
+  "riesgo_general": {
+    "prevalencia_general": 9.03,
+    "total_con_enfermedad": 39751,
+    "total_sin_enfermedad": 400359,
+    "explicacion": "De cada 100 personas en el dataset, 9.0 tienen enfermedad coronaria diagnosticada."
+  },
+  "comorbilidades": {
+    "accidente_cerebrovascular": {
+      "con_condicion": 18673,
+      "sin_condicion": 420412,
+      "riesgo_con_condicion": 36.06,
+      "riesgo_sin_condicion": 7.78,
+      "riesgo_relativo": 3.99,
+      "hallazgo": "Las personas con ACV tienen 4.0x más riesgo. De cada 100 con ACV, 36.1 tienen enfermedad coronaria.",
+      "implicacion": "El ACV y la enfermedad coronaria comparten mecanismos vasculares similares. Si tienes antecedentes de ACV, necesitas monitoreo cardíaco urgente."
+    },
+    "enfermedad_renal": {
+      "con_condicion": 19895,
+      "sin_condicion": 418694,
+      "riesgo_con_condicion": 29.37,
+      "riesgo_sin_condicion": 8.02,
+      "riesgo_relativo": 3.25,
+      "hallazgo": "Las personas con enfermedad renal tienen 3.3x más riesgo. 29.4% de ellas tienen enfermedad coronaria.",
+      "implicacion": "La enfermedad renal afecta la presión arterial y el metabolismo, aumentando riesgo cardiovascular. Requiere control regular."
+    },
+    "epoc": {
+      "con_condicion": 34789,
+      "sin_condicion": 403574,
+      "riesgo_con_condicion": 26.38,
+      "riesgo_sin_condicion": 7.49,
+      "riesgo_relativo": 2.92,
+      "hallazgo": "Las personas con EPOC tienen 2.9x más riesgo. Aproximadamente 26.4% tienen enfermedad coronaria.",
+      "implicacion": "La inflamación crónica en EPOC afecta el corazón. Fumadores con EPOC están en riesgo muy alto."
+    },
+    "diabetes": {
+      "con_condicion": 70203,
+      "sin_condicion": 365329,
+      "riesgo_con_condicion": 20.56,
+      "riesgo_sin_condicion": 6.85,
+      "riesgo_relativo": 2.28,
+      "hallazgo": "Las personas con diabetes tienen 2.3x más riesgo. 20.6% de diabéticos tienen enfermedad coronaria.",
+      "implicacion": "La diabetes daña los vasos sanguíneos. Incluso la prediabetes aumenta significativamente el riesgo cardiovascular."
+    },
+    "artritis": {
+      "con_condicion": 148808,
+      "sin_condicion": 289064,
+      "riesgo_con_condicion": 15.88,
+      "riesgo_sin_condicion": 5.5,
+      "riesgo_relativo": 1.76,
+      "hallazgo": "Las personas con artritis tienen 1.8x más riesgo. 15.9% de ellas tienen enfermedad coronaria.",
+      "implicacion": "La inflamación sistémica de la artritis afecta los vasos sanguíneos. Requiere control del dolor y la inflamación."
+    },
+    "depresion": {
+      "con_condicion": 90238,
+      "sin_condicion": 347522,
+      "riesgo_con_condicion": 11.23,
+      "riesgo_sin_condicion": 8.44,
+      "riesgo_relativo": 1.24,
+      "hallazgo": "Las personas con depresión tienen 1.2x más riesgo. 11.2% tienen enfermedad coronaria.",
+      "implicacion": "La depresión afecta comportamientos de salud y aumenta estrés. El tratamiento psicológico es crucial para la salud cardiovascular."
+    }
+  },
+  "edad_critica": {
+    "18-24": {
+      "prevalencia": 0.75,
+      "n": 26751
+    },
+    "25-29": {
+      "prevalencia": 0.97,
+      "n": 21871
+    },
+    "30-34": {
+      "prevalencia": 1.22,
+      "n": 25658
+    },
+    "35-39": {
+      "prevalencia": 1.65,
+      "n": 28341
+    },
+    "40-44": {
+      "prevalencia": 2.37,
+      "n": 29738
+    },
+    "45-49": {
+      "prevalencia": 3.76,
+      "n": 28324
+    },
+    "50-54": {
+      "prevalencia": 5.45,
+      "n": 33373
+    },
+    "55-59": {
+      "prevalencia": 7.92,
+      "n": 36487,
+      "inflexion": "Aumento significativo de 2.5% respecto al grupo anterior"
+    },
+    "60-64": {
+      "prevalencia": 10.0,
+      "n": 44036,
+      "inflexion": "Aumento significativo de 2.1% respecto al grupo anterior"
+    },
+    "65-69": {
+      "prevalencia": 12.57,
+      "n": 46572,
+      "inflexion": "Aumento significativo de 2.6% respecto al grupo anterior"
+    },
+    "70-74": {
+      "prevalencia": 15.86,
+      "n": 42938,
+      "inflexion": "Aumento significativo de 3.3% respecto al grupo anterior"
+    },
+    "75-79": {
+      "prevalencia": 19.41,
+      "n": 31987,
+      "inflexion": "Aumento significativo de 3.6% respecto al grupo anterior"
+    },
+    "80 or older": {
+      "prevalencia": 23.28,
+      "n": 35289,
+      "inflexion": "Aumento significativo de 3.9% respecto al grupo anterior"
+    },
+    "hallazgo": "El riesgo aumenta exponencialmente después de los 50 años. Entre 50-60 años se duplica el riesgo.",
+    "recomendacion": "Personas de 50+ años deben hacer chequeos cardiovasculares anuales, especialmente si tienen otros factores de riesgo."
+  },
+  "no_diagnosticados": {
+    "Bajo riesgo": {
+      "cantidad": 292574,
+      "porcentaje": 66.48
+    },
+    "Riesgo moderado": {
+      "cantidad": 64226,
+      "porcentaje": 14.59
+    },
+    "Riesgo alto": {
+      "cantidad": 28754,
+      "porcentaje": 6.53
+    },
+    "Riesgo muy alto": {
+      "cantidad": 14805,
+      "porcentaje": 3.36
+    },
+    "hallazgo": "Hay 43,559 personas sin diagnóstico pero con alto riesgo de enfermedad coronaria.",
+    "implicacion": "Esto representa el 9.9% de la población. Muchas podrían beneficiarse de pruebas de detección."
+  }
+}
