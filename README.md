@@ -2,6 +2,8 @@
 
 Análisis profundo de enfermedad coronaria con visualizaciones impresionantes basado en datos CDC BRFSS 2022.
 
+- Visualización: (https://dchavando.github.io/visualization-heart-diseases/)
+
 ## 📊 Descripción del Proyecto
 
 CardioVista es un análisis completo de factores de riesgo de enfermedad coronaria que incluye:
